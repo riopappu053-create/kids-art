@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Art &amp; Painting Classes</title>
+    <!-- Kids Palette Icon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%23581c87' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='13.5' cy='6.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='17.5' cy='10.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='8.5' cy='7.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='6.5' cy='12.5' r='.5' fill='%23581c87'/%3E%3Cpath d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z'/%3E%3C/svg%3E" type="image/svg+xml">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        cormorant: ['Cormorant Garamond', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#581c87',          /* Imperial Velvet Purple */
+                        primaryHover: '#3b0764',     /* Deep Velvet Purple */
+                        secondary: '#9333ea',        /* Electric Violet */
+                        secondaryHover: '#7e22ce',   /* Deep Vibrant Violet */
+                        purpleGlow: '#f3e8ff',       /* Soft Lavender Mist */
+                        brandLight: '#ffffff',
+                        brandDark: '#080511'         /* Obsidian Purple */
+                    },
+                    boxShadow: {
+                        'luxury': '0 10px 30px -5px rgba(88, 28, 135, 0.25)',
+                        'luxury-hover': '0 20px 40px -10px rgba(147, 51, 234, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mobile-menu-active { display: flex !important; }
+        * { 
+            transition-property: background-color, border-color, color, fill, stroke, box-shadow, transform; 
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+            transition-duration: 300ms; 
+        }
+        /* Custom Modern Luxury Purple Scrollbar */
+        .luxury-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .luxury-scrollbar::-webkit-scrollbar-track {
+            background: rgba(243, 232, 255, 0.4);
+            border-radius: 9999px;
+        }
+        .dark .luxury-scrollbar::-webkit-scrollbar-track {
+            background: rgba(88, 28, 135, 0.2);
+        }
+        .luxury-scrollbar::-webkit-scrollbar-thumb {
+            background: #9333ea;
+            border-radius: 9999px;
+        }
+        .luxury-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #581c87;
+        }
+    </style>
+</head>
+
+<body class="bg-brandLight dark:bg-brandDark text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- NAVBAR WITH HAMBURGER & MOBILE MENU -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 dark:bg-[#080511]/95 backdrop-blur-md border-b border-purple-100 dark:border-purple-950/60 shadow-sm transition-all duration-300">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex-shrink-0 text-3xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:opacity-95 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-text-bottom mr-1 text-primary dark:text-secondary">
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                </svg>
+                LittlePicasso
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden xl:flex items-center gap-6 2xl:gap-8">
+                
+                <!-- DROPDOWN: Home -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary transition-colors py-6 font-inter">
+                        Home
+                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="absolute top-[100%] start-0 w-48 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 shadow-luxury rounded-b-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="max-h-36 overflow-y-auto luxury-scrollbar py-2">
+                            <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 transition-colors font-inter">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 hover:text-secondary transition-colors font-inter">Home 2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">About</a>
+                <a href="classes.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Classes</a>
+                
+                <!-- Gallery: Single-click direct link (no scrollbar) -->
+                <a href="gallery.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Gallery</a>
+                
+                <a href="instructors.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Instructors</a>
+                <a href="workshops.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Workshops</a>
+                <a href="contact.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Contact</a>
+            </div>
+
+            <!-- Actions (RTL, Dark/Light, Trial CTA) -->
+            <div class="hidden xl:flex items-center gap-5">
+                <button onclick="toggleRTL()" aria-label="Toggle RTL" class="text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1 font-inter">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    <span id="rtl-label">RTL</span>
+                </button>
+                <button onclick="toggleTheme()" aria-label="Toggle Dark Mode" class="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors">
+                    <svg id="theme-icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <a href="contact.html#book-trial" class="bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 font-inter border border-secondary/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    Trial
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="hamburger-btn" class="xl:hidden text-primary dark:text-secondary p-2 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#080511] border-t border-purple-100 dark:border-purple-950/60 absolute w-full shadow-2xl z-40 max-h-[85vh] overflow-y-auto luxury-scrollbar">
+            <div class="px-6 py-8 flex flex-col gap-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 font-inter block mb-2">Home</span>
+                    <div class="flex flex-col gap-3 pl-3 border-l-2 border-primary">
+                        <a href="index.html" class="text-sm font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover font-inter">Home 1</a>
+                        <a href="home-2.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Home 2</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">About</a>
+                <a href="classes.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Classes</a>
+                <a href="gallery.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Gallery</a>
+                <a href="instructors.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Instructors</a>
+                <a href="workshops.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Workshops</a>
+                <a href="contact.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Contact</a>
+                
+                <hr class="border-purple-100 dark:border-purple-950/60">
+                <div class="flex items-center justify-between">
+                    <button onclick="toggleRTL()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Toggle RTL</button>
+                    <button onclick="toggleTheme()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Dark/Light</button>
+                </div>
+                <div class="flex flex-col gap-4 mt-2">
+                    <a href="contact.html#book-trial" class="text-center bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-widest px-6 py-4 rounded-lg shadow-luxury font-inter">Book Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <header class="relative w-full pt-20 pb-24 lg:pt-32 lg:pb-32 overflow-hidden bg-brandLight dark:bg-brandDark transition-colors duration-300">
+        <!-- Ambient Velvet & Violet Background Glows -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[550px] h-[550px] bg-primary/10 rounded-full blur-[120px] dark:bg-primary/25 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[450px] h-[450px] bg-secondary/15 rounded-full blur-[100px] dark:bg-secondary/20 pointer-events-none"></div>
+
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Left Side: Content -->
+                <div class="flex flex-col items-start text-left order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 bg-purpleGlow/60 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/60 rounded-full px-5 py-2 mb-8 shadow-sm transition-transform hover:scale-105">
+                        <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase text-primary dark:text-secondary font-inter">Ignite Young Imaginations</span>
+                    </div>
+                    
+                    <!-- Fixed Heading: Adequate leading and isolated block layout prevents any text overlap or clip cutoff -->
+                    <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.25] tracking-tight mb-6 text-brandDark dark:text-white font-extrabold drop-shadow-sm">
+                        Where every splash of color
+                        <span class="block mt-2 font-normal italic pb-1 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                            tells an original story.
+                        </span>
+                    </h1>
+                    
+                    <p class="font-inter text-lg sm:text-xl mb-10 text-gray-600 dark:text-gray-300 leading-relaxed font-medium max-w-xl drop-shadow-sm">
+                        Fun, inspiring painting and mixed-media art classes curated by age group. Guided by certified child educators to build real confidence and artistic joy.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                        <a href="contact.html#book-trial" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-[0.1em] rounded-lg hover:-translate-y-0.5 transition-all duration-300 shadow-luxury hover:shadow-luxury-hover font-inter border border-secondary/20">Book Free Trial</a>
+                        <a href="gallery.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-white text-sm font-bold uppercase tracking-[0.1em] rounded-lg transition-all duration-300 font-inter">Explore Gallery</a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="mt-12 flex items-center gap-8 pt-8 border-t border-purple-100 dark:border-purple-950/60 w-full max-w-md">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-playfair font-bold text-primary dark:text-secondary mb-1">1,200+</span>
+                            <span class="text-xs font-inter text-gray-500 uppercase tracking-widest font-semibold">Budding Artists</span>
+                        </div>
+                        <div class="w-px h-12 bg-purple-200 dark:bg-purple-900/60"></div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-playfair font-bold text-primary dark:text-secondary mb-1">1:6</span>
+                            <span class="text-xs font-inter text-gray-500 uppercase tracking-widest font-semibold">Teacher Ratio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image Composition -->
+                <div class="relative order-1 lg:order-2 w-full h-[450px] sm:h-[550px] lg:h-[650px] mt-6 lg:mt-0">
+                    <!-- Main Large Image -->
+                    <div class="absolute right-0 top-0 w-[85%] lg:w-[90%] h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20 border border-purple-200/50 dark:border-purple-900/40">
+                        <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1200&q=80" alt="Kids painting with vibrant water colors" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating Card -->
+                    <div class="absolute left-0 bottom-12 w-[60%] lg:w-[55%] rounded-2xl overflow-hidden shadow-2xl shadow-secondary/20 border-4 border-white dark:border-[#120a22] transform transition-transform hover:-translate-y-2 duration-500 z-20 bg-white dark:bg-[#120a22]">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Kid artwork close up" class="w-full h-40 sm:h-48 object-cover">
+                        <div class="p-4 flex items-center justify-between">
+                            <div>
+                                <p class="font-bold font-inter text-xs uppercase tracking-wider text-brandDark dark:text-white mb-1">Watercolor Club</p>
+                                <p class="text-xs text-secondary font-medium font-inter">Ages 6–9 Enrollment Open</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Radial Dots -->
+                    <div class="absolute -top-6 lg:-top-10 -right-6 lg:-right-10 w-24 h-24 lg:w-32 lg:h-32 bg-[radial-gradient(circle,theme(colors.secondary/0.3)_2px,transparent_2px)] bg-[length:16px_16px] z-0 hidden sm:block"></div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- 5 NEWLY ADDED CONTENT SECTIONS -->
+
+    <!-- SECTION 1: PROGRAMS / CLASSES BY AGE -->
+    <section class="py-24 bg-white dark:bg-[#0c071a] relative border-t border-purple-100 dark:border-purple-950/60">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Structured Art Journeys</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-extrabold text-brandDark dark:text-white mb-4">Curated Classes for Every Stage</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                    Designed specifically around child developmental milestones, nurturing motor coordination, color sense, and creative voice.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Toddler Card -->
+                <div class="bg-brandLight dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/50 rounded-2xl p-8 hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purpleGlow dark:bg-purple-950/60 text-secondary flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-secondary font-inter">Ages 3 – 5</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Little Explorers</h3>
+                        <p class="text-sm font-inter text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Sensory finger-painting, texture blending, and non-toxic materials designed to refine early fine motor control and tactile intuition.
+                        </p>
+                    </div>
+                    <a href="classes.html#toddlers" class="text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover flex items-center gap-2 font-inter">
+                        Explore Syllabus <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Junior Card -->
+                <div class="bg-brandLight dark:bg-[#120a22] border-2 border-secondary/50 dark:border-secondary/60 rounded-2xl p-8 shadow-luxury hover:shadow-luxury-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-secondary text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg tracking-widest">Popular</div>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purpleGlow dark:bg-purple-950/60 text-secondary flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-secondary font-inter">Ages 6 – 9</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Young Da Vincis</h3>
+                        <p class="text-sm font-inter text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Watercolor layering, gouache painting, brush handling, and basic composition while bringing their personal stories alive.
+                        </p>
+                    </div>
+                    <a href="classes.html#juniors" class="text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover flex items-center gap-2 font-inter">
+                        Explore Syllabus <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Teen Card -->
+                <div class="bg-brandLight dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/50 rounded-2xl p-8 hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purpleGlow dark:bg-purple-950/60 text-secondary flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-secondary font-inter">Ages 10 – 14</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Studio Masterclass</h3>
+                        <p class="text-sm font-inter text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Acrylic on stretched canvas, perspective theory, shading, lighting dynamics, and portfolio development for competitive school art programs.
+                        </p>
+                    </div>
+                    <a href="classes.html#teens" class="text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover flex items-center gap-2 font-inter">
+                        Explore Syllabus <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: WHY PARENTS CHOOSE US (KEY FEATURES) -->
+    <section class="py-24 bg-brandLight dark:bg-brandDark relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Details -->
+                <div>
+                    <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">The LittlePicasso Standard</span>
+                    <h2 class="font-playfair text-4xl sm:text-5xl font-extrabold text-brandDark dark:text-white mb-6">Designed to inspire, built with safety in mind.</h2>
+                    <p class="font-inter text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-8">
+                        We blend a rigorous fine-arts curriculum with an uninhibited, joyful atmosphere where every mistake becomes an invitation to innovate.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-playfair font-bold text-lg text-brandDark dark:text-white mb-1">100% Non-Toxic</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 font-inter">Certified child-safe paints, organic pigment powders, and rounded tools.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-playfair font-bold text-lg text-brandDark dark:text-white mb-1">Intimate 1:6 Pods</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 font-inter">Personalized attention for every brushstroke and individual pacing.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-playfair font-bold text-lg text-brandDark dark:text-white mb-1">Term End Showcase</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 font-inter">Public gallery exhibitions where students display framed work for families.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-playfair font-bold text-lg text-brandDark dark:text-white mb-1">Flexible Makeup Passes</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 font-inter">Never lose a class to unexpected school assignments or family travels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Composition -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-purple-100 dark:border-purple-900/40">
+                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1000&q=80" alt="Students in studio" class="w-full h-[420px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/60 p-6 rounded-2xl shadow-luxury max-w-xs hidden sm:block">
+                        <p class="font-playfair text-2xl font-bold text-primary dark:text-secondary mb-1">100% Free</p>
+                        <p class="text-xs font-inter text-gray-600 dark:text-gray-300">All materials, aprons, and professional canvases are provided on arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: STUDENT GALLERY SHOWCASE -->
+    <section class="py-24 bg-white dark:bg-[#0c071a] border-t border-purple-100 dark:border-purple-950/60">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Our Creative Hall</span>
+                    <h2 class="font-playfair text-4xl sm:text-5xl font-extrabold text-brandDark dark:text-white">Recent Student Masterpieces</h2>
+                </div>
+                <a href="gallery.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover font-inter">
+                    View Complete Gallery <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-luxury transition-all duration-300">
+                    <img src="img/nnn4.webp" alt="Student painting flowers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-purple-200">Acrylic on Canvas</span>
+                        <h4 class="font-playfair text-lg font-bold">Midnight Blooms</h4>
+                        <p class="text-xs text-purple-100 mt-1">By Maya, Age 8</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-luxury transition-all duration-300">
+                    <img src="img/nnn5.webp" alt="Abstract watercolor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-purple-200">Watercolor Fluidity</span>
+                        <h4 class="font-playfair text-lg font-bold">Ocean Dreams</h4>
+                        <p class="text-xs text-purple-100 mt-1">By Leo, Age 6</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-luxury transition-all duration-300">
+                    <img src="img/nnn3.webp" alt="Pastel landscape" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-purple-200">Oil Pastel</span>
+                        <h4 class="font-playfair text-lg font-bold">Sunset Valley</h4>
+                        <p class="text-xs text-purple-100 mt-1">By Sara, Age 11</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-luxury transition-all duration-300">
+                    <img src="img/nnn2.webp" alt="Impressionist landscape" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-purple-200">Gouache on Linen</span>
+                        <h4 class="font-playfair text-lg font-bold">Enchanted Woods</h4>
+                        <p class="text-xs text-purple-100 mt-1">By Ethan, Age 10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: INSTRUCTORS SPOTLIGHT -->
+    <section class="py-24 bg-brandLight dark:bg-brandDark relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Mentorship with Heart</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-extrabold text-brandDark dark:text-white mb-4">Meet Our Studio Mentors</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                    Practicing professional artists with extensive backgrounds in early childhood psychology and creative pedagogy.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mentor 1 -->
+                <div class="bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 rounded-2xl overflow-hidden group hover:shadow-luxury transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/ma2.webp" alt="Elena Rostova" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-secondary font-inter">Lead Watercolorist</span>
+                        <h3 class="font-playfair text-xl font-bold text-brandDark dark:text-white mt-1 mb-2">Elena Rostova</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-inter leading-relaxed">MFA in Fine Arts. Over 8 years of nurturing imaginative confidence in our toddler and junior classes.</p>
+                    </div>
+                </div>
+
+                <!-- Mentor 2 -->
+                <div class="bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 rounded-2xl overflow-hidden group hover:shadow-luxury transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/ma3.webp" alt="Julian Reed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-secondary font-inter">Sculpture &amp; Acrylics</span>
+                        <h3 class="font-playfair text-xl font-bold text-brandDark dark:text-white mt-1 mb-2">Julian Reed</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-inter leading-relaxed">Celebrated public muralist passionate about teaching scale, lighting, and bold expressive brushwork to teens.</p>
+                    </div>
+                </div>
+
+                <!-- Mentor 3 -->
+                <div class="bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 rounded-2xl overflow-hidden group hover:shadow-luxury transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/ma1.webp" alt="Dr. Amara Chen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-secondary font-inter">Child Creative Specialist</span>
+                        <h3 class="font-playfair text-xl font-bold text-brandDark dark:text-white mt-1 mb-2">Dr. Amara Chen</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-inter leading-relaxed">Art therapist and sensory educator guiding children toward self-expression and emotional calm through art.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PARENT TESTIMONIALS -->
+    <section class="py-24 bg-white dark:bg-[#0c071a] border-t border-purple-100 dark:border-purple-950/60">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Family Testimonials</span>
+                <h2 class="font-playfair text-4xl sm:text-5xl font-extrabold text-brandDark dark:text-white mb-4">Loved by Parents &amp; Children</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                    Read how our weekly creative studio sessions have sparked growth, calm, and confidence at home.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brandLight dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/50 p-8 rounded-2xl shadow-sm hover:shadow-luxury transition-all duration-300">
+                    <div class="flex text-amber-400 mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="font-cormorant italic text-xl text-brandDark dark:text-gray-200 mb-6">
+                        "My daughter used to be hesitant with art assignments at school. After just three weeks with LittlePicasso, she wakes up on Saturday mornings eager to paint canvas murals."
+                    </p>
+                    <div>
+                        <p class="font-bold text-sm font-inter text-brandDark dark:text-white">Sophia Hawthorne</p>
+                        <p class="text-xs text-gray-500 font-inter">Mother of Chloe (Age 7)</p>
+                    </div>
+                </div>
+
+                <div class="bg-brandLight dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/50 p-8 rounded-2xl shadow-sm hover:shadow-luxury transition-all duration-300">
+                    <div class="flex text-amber-400 mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="font-cormorant italic text-xl text-brandDark dark:text-gray-200 mb-6">
+                        "The small class sizes and clean, safe environment are unmatched. The instructors treat each child's vision with genuine dignity and encouragement."
+                    </p>
+                    <div>
+                        <p class="font-bold text-sm font-inter text-brandDark dark:text-white">Marcus Sterling</p>
+                        <p class="text-xs text-gray-500 font-inter">Father of Liam (Age 5)</p>
+                    </div>
+                </div>
+
+                <div class="bg-brandLight dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/50 p-8 rounded-2xl shadow-sm hover:shadow-luxury transition-all duration-300">
+                    <div class="flex text-amber-400 mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="font-cormorant italic text-xl text-brandDark dark:text-gray-200 mb-6">
+                        "The annual gallery exhibition was truly heartwarming. Seeing our son stand proudly next to his framed acrylic masterpiece made every weekend session worth it."
+                    </p>
+                    <div>
+                        <p class="font-bold text-sm font-inter text-brandDark dark:text-white">Dr. Rachel Vance</p>
+                        <p class="text-xs text-gray-500 font-inter">Mother of Noah (Age 12)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandLight dark:bg-[#05030b] pt-24 pb-12 border-t border-purple-100 dark:border-purple-950/60 relative z-20">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            
+            <!-- Newsletter / Trial Signup -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20 border-b border-purple-100 dark:border-purple-950/60 pb-16">
+                <div class="max-w-xl">
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Nurture their creativity.</h2>
+                    <p class="font-inter text-xl text-gray-600 dark:text-gray-300 font-medium">Subscribe for holiday art camp alerts, weekly craft tutorials, and student gallery exhibition invites.</p>
+                </div>
+                <div class="w-full lg:w-1/3">
+                    <form class="relative flex items-center" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter parent email address" class="w-full bg-white dark:bg-[#120a22] border border-gray-300 dark:border-purple-950/80 text-brandDark dark:text-white px-6 py-4 rounded-lg shadow-sm focus:outline-none focus:border-secondary dark:focus:border-secondary transition-all placeholder-gray-400 dark:placeholder-gray-500 font-inter">
+                        <button type="submit" class="absolute end-2 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-2.5 rounded-md transition-all font-inter shadow-md">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding Column -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-block text-3xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-text-bottom mr-1 text-primary dark:text-secondary">
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                        </svg>
+                        LittlePicasso
+                    </a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 font-medium font-inter">A warm and expressive art studio dedicated to building confidence, fine motor skills, and artistic passion in children of all ages.</p>
+                    <div class="flex gap-4 text-gray-400 dark:text-gray-500">
+                        <a href="#" class="hover:text-secondary transition-colors" aria-label="X Platform">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                        </a>
+                        <a href="#" class="hover:text-secondary transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Classes by Age -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Classes</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="classes.html#toddlers" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Toddlers (Ages 3–5)</a></li>
+                        <li><a href="classes.html#juniors" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Juniors (Ages 6–9)</a></li>
+                        <li><a href="classes.html#teens" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Teens (Ages 10–14)</a></li>
+                        <li><a href="workshops.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Workshops</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Explore</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="gallery.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Gallery</a></li>
+                        <li><a href="instructors.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Instructors</a></li>
+                        <li><a href="contact.html#book-trial" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Trial</a></li>
+                        <li><a href="safety.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Materials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Contact</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="contact.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Booking</a></li>
+                        <li><a href="contact.html#hours" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Timings: 9AM–6PM</a></li>
+                        <li><a href="contact.html#map" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Location</a></li>
+                        <li><a href="faq.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-t border-purple-100 dark:border-purple-950/60 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-500 font-medium font-inter">&copy; 2026 LittlePicasso Art Studio Inc. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="privacy.html" class="text-xs text-gray-500 hover:text-secondary transition-colors font-medium font-inter">Privacy</a>
+                    <a href="terms.html" class="text-xs text-gray-500 hover:text-secondary transition-colors font-medium font-inter">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FUNCTIONAL SCRIPTS -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        hamburgerBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.add('mobile-menu-active');
+                hamburgerBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+            } else {
+                mobileMenu.classList.remove('mobile-menu-active');
+                hamburgerBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        });
+
+        function toggleRTL() {
+            const htmlEl = document.documentElement;
+            const rtlLabel = document.getElementById('rtl-label');
+            if (htmlEl.getAttribute('dir') === 'ltr') {
+                htmlEl.setAttribute('dir', 'rtl');
+                if (rtlLabel) rtlLabel.innerText = 'LTR';
+            } else {
+                htmlEl.setAttribute('dir', 'ltr');
+                if (rtlLabel) rtlLabel.innerText = 'RTL';
+            }
+        }
+
+        function toggleTheme() {
+            const htmlEl = document.documentElement;
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>

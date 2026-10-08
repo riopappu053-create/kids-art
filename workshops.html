@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend & Holiday Art Workshops | LittlePicasso</title>
+    <!-- Kids Palette Icon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%23581c87' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='13.5' cy='6.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='17.5' cy='10.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='8.5' cy='7.5' r='.5' fill='%23581c87'/%3E%3Ccircle cx='6.5' cy='12.5' r='.5' fill='%23581c87'/%3E%3Cpath d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z'/%3E%3C/svg%3E" type="image/svg+xml">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        cormorant: ['Cormorant Garamond', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#581c87',          /* Imperial Velvet Purple */
+                        primaryHover: '#3b0764',     /* Deep Velvet Purple */
+                        secondary: '#9333ea',        /* Electric Violet */
+                        secondaryHover: '#7e22ce',   /* Deep Vibrant Violet */
+                        purpleGlow: '#f3e8ff',       /* Soft Lavender Mist */
+                        brandLight: '#ffffff',
+                        brandDark: '#080511'         /* Obsidian Purple */
+                    },
+                    boxShadow: {
+                        'luxury': '0 10px 30px -5px rgba(88, 28, 135, 0.25)',
+                        'luxury-hover': '0 20px 40px -10px rgba(147, 51, 234, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mobile-menu-active { display: flex !important; }
+        * { 
+            transition-property: background-color, border-color, color, fill, stroke, box-shadow, transform; 
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+            transition-duration: 300ms; 
+        }
+        /* Custom Modern Luxury Purple Scrollbar */
+        .luxury-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .luxury-scrollbar::-webkit-scrollbar-track {
+            background: rgba(243, 232, 255, 0.4);
+            border-radius: 9999px;
+        }
+        .dark .luxury-scrollbar::-webkit-scrollbar-track {
+            background: rgba(88, 28, 135, 0.2);
+        }
+        .luxury-scrollbar::-webkit-scrollbar-thumb {
+            background: #9333ea;
+            border-radius: 9999px;
+        }
+        .luxury-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #581c87;
+        }
+    </style>
+</head>
+
+<body class="bg-brandLight dark:bg-brandDark text-gray-900 dark:text-gray-100 antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- NAVBAR WITH HAMBURGER & MOBILE MENU -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 dark:bg-[#080511]/95 backdrop-blur-md border-b border-purple-100 dark:border-purple-950/60 shadow-sm transition-all duration-300">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex-shrink-0 text-3xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:opacity-95 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-text-bottom mr-1 text-primary dark:text-secondary">
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                </svg>
+                LittlePicasso
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden xl:flex items-center gap-6 2xl:gap-8">
+                
+                <!-- DROPDOWN: Home -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary transition-colors py-6 font-inter">
+                        Home
+                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="absolute top-[100%] start-0 w-48 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 shadow-luxury rounded-b-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="max-h-36 overflow-y-auto luxury-scrollbar py-2">
+                            <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 transition-colors font-inter">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 hover:text-secondary transition-colors font-inter">Home 2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">About</a>
+                <a href="classes.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Classes</a>
+                
+                <!-- Gallery: Single-click direct link (no scrollbar) -->
+                <a href="gallery.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Gallery</a>
+                
+                <a href="instructors.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Instructors</a>
+                <a href="workshops.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Workshops</a>
+                <a href="contact.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Contact</a>
+            </div>
+
+            <!-- Actions (RTL, Dark/Light, Trial CTA) -->
+            <div class="hidden xl:flex items-center gap-5">
+                <button onclick="toggleRTL()" aria-label="Toggle RTL" class="text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1 font-inter">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    <span id="rtl-label">RTL</span>
+                </button>
+                <button onclick="toggleTheme()" aria-label="Toggle Dark Mode" class="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors">
+                    <svg id="theme-icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                </button>
+                <a href="contact.html#book-trial" class="bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 font-inter border border-secondary/20">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    Trial
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="hamburger-btn" class="xl:hidden text-primary dark:text-secondary p-2 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#080511] border-t border-purple-100 dark:border-purple-950/60 absolute w-full shadow-2xl z-40 max-h-[85vh] overflow-y-auto luxury-scrollbar">
+            <div class="px-6 py-8 flex flex-col gap-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 font-inter block mb-2">Home</span>
+                    <div class="flex flex-col gap-3 pl-3 border-l-2 border-primary">
+                        <a href="index.html" class="text-sm font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover font-inter">Home 1</a>
+                        <a href="home-2.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Home 2</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">About</a>
+                <a href="classes.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Classes</a>
+                <a href="gallery.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Gallery</a>
+                <a href="instructors.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Instructors</a>
+                <a href="workshops.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Workshops</a>
+                <a href="contact.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Contact</a>
+                
+                <hr class="border-purple-100 dark:border-purple-950/60">
+                <div class="flex items-center justify-between">
+                    <button onclick="toggleRTL()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Toggle RTL</button>
+                    <button onclick="toggleTheme()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Dark/Light</button>
+                </div>
+                <div class="flex flex-col gap-4 mt-2">
+                    <a href="contact.html#book-trial" class="text-center bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-widest px-6 py-4 rounded-lg shadow-luxury font-inter">Book Trial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FULL VIEWPORT HERO BANNER -->
+    <header class="relative w-full h-[calc(100vh-5rem)] min-h-[580px] flex items-center justify-center overflow-hidden">
+        <!-- Hero Background Image -->
+        <img 
+            src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=2000&q=85" 
+            alt="Children collaborating on colorful craft and art workshop projects" 
+            class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        
+        <!-- Velvet Luxury Gradient & Dark Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-primary/50 to-brandDark/45"></div>
+        <div class="absolute inset-0 bg-black/25"></div>
+
+        <!-- Ambient Velvet & Violet Background Glows -->
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-secondary/30 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 -left-20 w-96 h-96 bg-primary/40 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <!-- Banner Content -->
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 dark:bg-purple-950/40 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-6 transition-transform hover:scale-105">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+                <span class="text-xs font-bold tracking-widest uppercase text-purpleGlow font-inter">Weekend Camps &amp; Seasonal Masterclasses</span>
+            </div>
+
+            <h1 class="font-playfair text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.2] tracking-tight mb-6 drop-shadow-md">
+                Immersive Workshops for
+                <span class="block italic font-normal text-purpleGlow">Curious Young Creators.</span>
+            </h1>
+
+            <p class="font-inter text-lg sm:text-xl text-purple-100/90 max-w-2xl mx-auto leading-relaxed mb-10 font-medium drop-shadow-sm">
+                Hands-on pottery sculpting, mixed-media collage, botanical sketching, and holiday art bootcamps guided by inspiring guest artists.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <a href="#workshop-schedule" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 font-inter border border-secondary/20">
+                    Explore Schedule
+                </a>
+                <a href="contact.html#book-trial" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-white/15 hover:bg-white/25 text-white backdrop-blur-sm border border-white/30 text-xs font-bold uppercase tracking-widest rounded-lg hover:-translate-y-0.5 transition-all duration-300 font-inter">
+                    Reserve Workshop Seat
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 6 MODERN WORKSPACE SECTIONS ==================== -->
+
+    <!-- SECTION 1: WORKSPACE ARCHITECTURE & ATELIER ZONES -->
+    <section id="workshop-schedule" class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Immersive Architecture</span>
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white">Curated Atelier Zones</h2>
+                </div>
+                <p class="font-inter text-gray-600 dark:text-gray-400 text-sm sm:text-base max-w-md leading-relaxed">
+                    Four distinct creative zones engineered specifically for sensory safety, freedom of scale, and artistic collaboration.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Zone 1 -->
+                <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 01</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Ceramics &amp; Clay Wheel</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Equipped with 6 micro electric pottery wheels, natural gray stoneware, non-toxic lead-free glazes, and private kiln firing facilities.</p>
+                    </div>
+                    <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
+                        <span>Capacity: 8 seats</span>
+                        <span class="text-primary dark:text-purpleGlow font-semibold">Kid-Safe Wheels</span>
+                    </div>
+                </div>
+
+                <!-- Zone 2 -->
+                <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 02</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Grand Canvas Studio</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Full-height Beechwood easels with 5500K daylight-corrected illumination, allowing scale paintings up to 48 inches across.</p>
+                    </div>
+                    <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
+                        <span>Capacity: 12 easels</span>
+                        <span class="text-primary dark:text-purpleGlow font-semibold">True-Daylight</span>
+                    </div>
+                </div>
+
+                <!-- Zone 3 -->
+                <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 03</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Printmaking &amp; Press</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Dedicated linocut, foam-relief, and botanical mono-printing rollers with water-soluble archival inks and heavy rag drying racks.</p>
+                    </div>
+                    <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
+                        <span>Capacity: 10 creators</span>
+                        <span class="text-primary dark:text-purpleGlow font-semibold">Dry Washable</span>
+                    </div>
+                </div>
+
+                <!-- Zone 4 -->
+                <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 04</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Sensory Splash Lab</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Waterproof room tailored for toddlers and early learners to explore splatter acrylics, marble baths, and textured finger tempera.</p>
+                    </div>
+                    <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
+                        <span>Capacity: 8 toddlers</span>
+                        <span class="text-primary dark:text-purpleGlow font-semibold">Full Smock Guard</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: WORKSPACE SAFETY & ENVIRONMENT PROTOCOLS -->
+    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="bg-white dark:bg-[#120a22] rounded-3xl p-8 sm:p-12 lg:p-16 border border-purple-100 dark:border-purple-900/40 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block">Laboratory Standards</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-tight">
+                        Safe Air. Safe Skin. Pure Creative Peace.
+                    </h2>
+                    <p class="font-inter text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Parents never have to worry about harsh solvent vapors or toxic residues. LittlePicasso workspaces adhere strictly to pediatric cleanroom standards.
+                    </p>
+                    <div class="pt-4 flex items-center gap-4">
+                        <div class="flex -space-x-3 overflow-hidden">
+                            <span class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-purple-950 bg-primary/20 flex items-center justify-center text-xs font-bold text-primary dark:text-purpleGlow font-inter">AP</span>
+                            <span class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-purple-950 bg-secondary/20 flex items-center justify-center text-xs font-bold text-secondary font-inter">CE</span>
+                            <span class="inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-purple-950 bg-purpleGlow/80 flex items-center justify-center text-xs font-bold text-primary font-inter">ISO</span>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-600 dark:text-gray-400 font-inter">All studio materials certified compliant with ASTM D-4236.</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-purple-50/50 dark:bg-purple-950/30 border border-purple-100/70 dark:border-purple-900/40">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary dark:text-secondary mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold text-brandDark dark:text-white mb-2">Dual HEPA Air Exchange</h4>
+                        <p class="font-inter text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Continuous 6x hourly air exchange with carbon charcoal filters eliminates clay dust and organic pigment mists.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-purple-50/50 dark:bg-purple-950/30 border border-purple-100/70 dark:border-purple-900/40">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary dark:text-secondary mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold text-brandDark dark:text-white mb-2">Bio-Wash Sanitization</h4>
+                        <p class="font-inter text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Every brush, palette knife, and splash apron is sterilized between sessions using organic botanical sanitizers.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-purple-50/50 dark:bg-purple-950/30 border border-purple-100/70 dark:border-purple-900/40">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary dark:text-secondary mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold text-brandDark dark:text-white mb-2">Ergonomic Adjustability</h4>
+                        <p class="font-inter text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Custom height-variable stools and drafting tables prevent spinal strain during long ceramic and painting sessions.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-purple-50/50 dark:bg-purple-950/30 border border-purple-100/70 dark:border-purple-900/40">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary dark:text-secondary mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h4 class="font-playfair text-xl font-bold text-brandDark dark:text-white mb-2">Direct Wash Sinks</h4>
+                        <p class="font-inter text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Touchless low-height handwash stations allow children to safely clean up without stepping outside the workspace.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WORKSPACE PASSES & MEMBERSHIP PACKAGES -->
+    <section class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Flexible Access</span>
+                <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Workspace Passes &amp; Studio Memberships</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-400 text-base leading-relaxed">Choose single weekend intensive admissions or season-long unlimited atelier passes for your young artist.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Plan 1 -->
+                <div class="rounded-3xl p-8 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 shadow-sm flex flex-col justify-between hover:shadow-luxury transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purpleGlow font-inter">Single Entry</span>
+                        <h3 class="font-playfair text-3xl font-bold text-brandDark dark:text-white mt-2 mb-4">Weekend Drop-In</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 mb-6">Ideal for exploring an unfamiliar medium such as wheel-thrown ceramics or oversized acrylics.</p>
+                        <div class="font-playfair text-5xl font-bold text-brandDark dark:text-white mb-6">$65 <span class="font-inter text-xs font-normal text-gray-500">/ 3-hour session</span></div>
+                        <ul class="space-y-3 font-inter text-sm text-gray-600 dark:text-gray-300 mb-8">
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> All raw clay, paints, &amp; paper</li>
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> Smock &amp; eye-guard loaner</li>
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> Finished piece packing box</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html#book-trial" class="w-full text-center py-3.5 rounded-xl border border-primary dark:border-secondary text-primary dark:text-purpleGlow font-inter text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-white dark:hover:bg-secondary dark:hover:text-white transition-all">Select Pass</a>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="rounded-3xl p-8 bg-gradient-to-b from-primary via-primaryHover to-brandDark text-white shadow-luxury relative flex flex-col justify-between transform lg:-translate-y-2 border border-secondary/40">
+                    <span class="absolute top-5 end-6 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full font-inter">Most Popular</span>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-purpleGlow font-inter">4-Workshop Bundle</span>
+                        <h3 class="font-playfair text-3xl font-bold text-white mt-2 mb-4">Young Master Pass</h3>
+                        <p class="font-inter text-sm text-purple-100 mb-6">Four weekend sessions spanning ceramics, printmaking, water mediums, and sculpture.</p>
+                        <div class="font-playfair text-5xl font-bold text-white mb-6">$220 <span class="font-inter text-xs font-normal text-purple-200">/ 4 sessions</span></div>
+                        <ul class="space-y-3 font-inter text-sm text-purple-100 mb-8">
+                            <li class="flex items-center gap-2.5"><span class="text-purpleGlow font-bold">&#10003;</span> Priority atelier station booking</li>
+                            <li class="flex items-center gap-2.5"><span class="text-purpleGlow font-bold">&#10003;</span> Dedicated personal drying cubby</li>
+                            <li class="flex items-center gap-2.5"><span class="text-purpleGlow font-bold">&#10003;</span> 2 complimentary kiln firings</li>
+                            <li class="flex items-center gap-2.5"><span class="text-purpleGlow font-bold">&#10003;</span> Annual youth gallery ticket</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html#book-trial" class="w-full text-center py-3.5 rounded-xl bg-white text-brandDark font-inter text-xs font-bold tracking-widest uppercase hover:bg-purpleGlow transition-all shadow-md">Claim Master Pass</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="rounded-3xl p-8 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 shadow-sm flex flex-col justify-between hover:shadow-luxury transition-all">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purpleGlow font-inter">Monthly Open Access</span>
+                        <h3 class="font-playfair text-3xl font-bold text-brandDark dark:text-white mt-2 mb-4">Studio Resident</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 mb-6">For teen artists compiling fine art high school or university admissions portfolios.</p>
+                        <div class="font-playfair text-5xl font-bold text-brandDark dark:text-white mb-6">$380 <span class="font-inter text-xs font-normal text-gray-500">/ month</span></div>
+                        <ul class="space-y-3 font-inter text-sm text-gray-600 dark:text-gray-300 mb-8">
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> Unlimited open studio access</li>
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> 1-on-1 portfolio review monthly</li>
+                            <li class="flex items-center gap-2.5"><span class="text-secondary font-bold">&#10003;</span> Unlimited materials allotment</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html#book-trial" class="w-full text-center py-3.5 rounded-xl border border-primary dark:border-secondary text-primary dark:text-purpleGlow font-inter text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-white dark:hover:bg-secondary dark:hover:text-white transition-all">Select Pass</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WORKSPACE EQUIPMENT & GEAR INVENTORY -->
+    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Professional Arsenal</span>
+                <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Inside Our Equipment Vault</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-400 text-base leading-relaxed">Top-tier artist tools selected for child safety, durability, and true expressive capability.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Shimpo</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Whisper Wheels</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Mabef</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Beechwood Easels</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Fabriano</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Cotton Papers</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Sennelier</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Organic Pigments</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Olympic</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Ceramic Kilns</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
+                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Da Vinci</p>
+                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Filbert Brushes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PARENT ATELIER LOUNGE & OBSERVATION PODS -->
+    <section class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1 relative rounded-3xl overflow-hidden shadow-luxury border border-purple-100 dark:border-purple-900/50 h-80 sm:h-96">
+                    <img src="img/aa1.webp" alt="Parent observation cafe and workspace lounge" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 start-6 end-6 text-white">
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-purpleGlow font-inter">Complimentary For Caregivers</span>
+                        <p class="font-playfair text-xl font-bold">The Parent Mezzanine Lounge</p>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 space-y-6">
+                    <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block">Comfort While They Create</span>
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-tight">
+                        Relax While Your Child Discovers Their Masterpiece
+                    </h2>
+                    <p class="font-inter text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+                        Rather than waiting in cars or rushing back, parents can unwind in our glass-partitioned viewing mezzanine overlooking the studio floor.
+                    </p>
+                    <div class="space-y-3 font-inter text-sm text-gray-600 dark:text-gray-300">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            <span>High-speed fiber Wi-Fi and quiet co-working desks</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            <span>Artisanal pour-over espresso bar and organic herbal teas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            <span>Acoustic sound damping for quiet phone conferences</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="contact.html#hours" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary hover:underline font-inter">
+                            Visit Studio Lounge During Tour &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: WORKSPACE BOOKING & ATELIER FAQ -->
+    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[900px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Workspace Details</span>
+                <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Workspace &amp; Studio Guidelines</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-400 text-base leading-relaxed">Everything parents need to prepare before sending their young creator to our weekend intensives.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-[#120a22] p-6 sm:p-8 rounded-2xl border border-purple-100 dark:border-purple-900/40 shadow-sm">
+                    <h3 class="font-inter font-bold text-lg text-brandDark dark:text-white mb-2 flex items-center justify-between">
+                        <span>Are all materials and protective smocks included in the fee?</span>
+                        <svg class="w-5 h-5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </h3>
+                    <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
+                        Yes, 100% of fine Italian rag papers, non-toxic clays, glazes, canvas stretchers, and personalized linen aprons are provided. You never need to supply external art gear.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-[#120a22] p-6 sm:p-8 rounded-2xl border border-purple-100 dark:border-purple-900/40 shadow-sm">
+                    <h3 class="font-inter font-bold text-lg text-brandDark dark:text-white mb-2 flex items-center justify-between">
+                        <span>When can clay sculptures and fired pottery pieces be picked up?</span>
+                        <svg class="w-5 h-5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </h3>
+                    <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
+                        Because ceramics must completely slow-dry for 5 days before undergoing double bisque and glaze firings, items are ready for pickup 10 days after your workshop date.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-[#120a22] p-6 sm:p-8 rounded-2xl border border-purple-100 dark:border-purple-900/40 shadow-sm">
+                    <h3 class="font-inter font-bold text-lg text-brandDark dark:text-white mb-2 flex items-center justify-between">
+                        <span>Can we reschedule a session if our child feels unwell?</span>
+                        <svg class="w-5 h-5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </h3>
+                    <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
+                        Absolutely. With a brief 12-hour notice, workshop credits remain active for 6 months and can be transferred to any future weekend workshop or holiday art camp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandLight dark:bg-[#05030b] pt-24 pb-12 border-t border-purple-100 dark:border-purple-950/60 relative z-20">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            
+            <!-- Newsletter / Trial Signup -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20 border-b border-purple-100 dark:border-purple-950/60 pb-16">
+                <div class="max-w-xl">
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Nurture their creativity.</h2>
+                    <p class="font-inter text-xl text-gray-600 dark:text-gray-300 font-medium">Subscribe for holiday art camp alerts, weekly craft tutorials, and student gallery exhibition invites.</p>
+                </div>
+                <div class="w-full lg:w-1/3">
+                    <form class="relative flex items-center" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter parent email address" class="w-full bg-white dark:bg-[#120a22] border border-gray-300 dark:border-purple-950/80 text-brandDark dark:text-white px-6 py-4 rounded-lg shadow-sm focus:outline-none focus:border-secondary dark:focus:border-secondary transition-all placeholder-gray-400 dark:placeholder-gray-500 font-inter">
+                        <button type="submit" class="absolute end-2 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-2.5 rounded-md transition-all font-inter shadow-md">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding Column -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-block text-3xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block align-text-bottom mr-1 text-primary dark:text-secondary">
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                        </svg>
+                        LittlePicasso
+                    </a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 font-medium font-inter">A warm and expressive art studio dedicated to building confidence, fine motor skills, and artistic passion in children of all ages.</p>
+                    <div class="flex gap-4 text-gray-400 dark:text-gray-500">
+                        <a href="#" class="hover:text-secondary transition-colors" aria-label="X Platform">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                        </a>
+                        <a href="#" class="hover:text-secondary transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Classes by Age -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Classes</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="classes.html#toddlers" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Toddlers (Ages 3–5)</a></li>
+                        <li><a href="classes.html#juniors" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Juniors (Ages 6–9)</a></li>
+                        <li><a href="classes.html#teens" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Teens (Ages 10–14)</a></li>
+                        <li><a href="workshops.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Workshops</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Explore</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="gallery.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Gallery</a></li>
+                        <li><a href="instructors.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Instructors</a></li>
+                        <li><a href="contact.html#book-trial" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Trial</a></li>
+                        <li><a href="safety.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Materials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-brandDark dark:text-white font-bold tracking-widest uppercase text-xs mb-6 font-inter">Contact</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="contact.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Booking</a></li>
+                        <li><a href="contact.html#hours" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Timings: 9AM–6PM</a></li>
+                        <li><a href="contact.html#map" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">Location</a></li>
+                        <li><a href="faq.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors font-medium font-inter">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-t border-purple-100 dark:border-purple-950/60 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-500 font-medium font-inter">&copy; 2026 LittlePicasso Art Studio Inc. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="privacy.html" class="text-xs text-gray-500 hover:text-secondary transition-colors font-medium font-inter">Privacy</a>
+                    <a href="terms.html" class="text-xs text-gray-500 hover:text-secondary transition-colors font-medium font-inter">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FUNCTIONAL SCRIPTS -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        hamburgerBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.add('mobile-menu-active');
+                hamburgerBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>';
+            } else {
+                mobileMenu.classList.remove('mobile-menu-active');
+                hamburgerBtn.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>';
+            }
+        });
+
+        function toggleRTL() {
+            const htmlEl = document.documentElement;
+            const rtlLabel = document.getElementById('rtl-label');
+            if (htmlEl.getAttribute('dir') === 'ltr') {
+                htmlEl.setAttribute('dir', 'rtl');
+                if (rtlLabel) rtlLabel.innerText = 'LTR';
+            } else {
+                htmlEl.setAttribute('dir', 'ltr');
+                if (rtlLabel) rtlLabel.innerText = 'RTL';
+            }
+        }
+
+        function toggleTheme() {
+            const htmlEl = document.documentElement;
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>
