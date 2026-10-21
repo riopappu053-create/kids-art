@@ -90,45 +90,42 @@
                 LittlePicasso
             </a>
 
-            <!-- Desktop Links -->
+                        <!-- Desktop Links -->
             <div class="hidden xl:flex items-center gap-6 2xl:gap-8">
                 
                 <!-- DROPDOWN: Home -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary transition-colors py-6 font-inter">
+                    <button class="nav-item nav-home-btn flex items-center gap-1 text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">
                         Home
                         <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                     </button>
                     <div class="absolute top-[100%] start-0 w-48 bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 shadow-luxury rounded-b-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50">
                         <div class="max-h-36 overflow-y-auto luxury-scrollbar py-2">
-                            <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-primary dark:text-secondary hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 transition-colors font-inter">Home 1</a>
-                            <a href="home-2.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 hover:text-secondary transition-colors font-inter">Home 2</a>
+                            <a href="index.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 hover:text-secondary transition-colors font-inter">Home 1</a>
+                            <a href="home-2.html" class="block px-4 py-2.5 text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:bg-purpleGlow/50 dark:hover:bg-purple-950/40 hover:text-secondary transition-colors font-inter">Home 2</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="about.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">About</a>
-                <a href="classes.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Classes</a>
-                
-                <!-- Gallery: Single-click direct link (no scrollbar) -->
-                <a href="gallery.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Gallery</a>
-                
-                <a href="instructors.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Instructors</a>
-                <a href="workshops.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Workshops</a>
-                <a href="contact.html" class="text-xs font-semibold tracking-widest uppercase text-gray-900 dark:text-gray-200 hover:text-secondary dark:hover:text-secondary transition-colors font-inter">Contact</a>
+                <a href="about.html" class="nav-item text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">About</a>
+                <a href="classes.html" class="nav-item text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">Classes</a>
+                <a href="gallery.html" class="nav-item text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">Gallery</a>
+                <a href="instructors.html" class="nav-item text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">Instructors</a>
+                <a href="workshops.html" class="nav-item text-xs font-bold tracking-widest uppercase text-primary dark:text-secondary py-6 font-inter relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full">Workshops</a>
+                <a href="contact.html" class="nav-item text-xs font-semibold tracking-widest uppercase text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary py-6 font-inter transition-colors">Contact</a>
             </div>
 
-            <!-- Actions (RTL, Dark/Light, Trial CTA) -->
-            <div class="hidden xl:flex items-center gap-5">
-                <button onclick="toggleRTL()" aria-label="Toggle RTL" class="text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1 font-inter">
+                        <!-- Actions (RTL, Dark/Light, Trial CTA) -->
+            <div class="hidden xl:flex items-center gap-3">
+                <button onclick="toggleRTL()" aria-label="Toggle RTL" class="h-10 px-3.5 rounded-xl bg-purple-50/80 dark:bg-purple-950/50 border border-purple-200/80 dark:border-purple-800/60 text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-900/50 hover:text-primary dark:hover:text-secondary shadow-sm transition-all duration-300 flex items-center gap-1.5 font-inter text-xs font-bold uppercase tracking-wider">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
                     <span id="rtl-label">RTL</span>
                 </button>
-                <button onclick="toggleTheme()" aria-label="Toggle Dark Mode" class="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors">
-                    <svg id="theme-icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    <svg id="theme-icon-moon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                <button onclick="toggleTheme()" aria-label="Toggle Dark Mode" class="h-10 w-10 rounded-xl bg-purple-50/80 dark:bg-purple-950/50 border border-purple-200/80 dark:border-purple-800/60 text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-purple-900/50 hover:text-primary dark:hover:text-secondary shadow-sm transition-all duration-300 flex items-center justify-center">
+                    <svg id="theme-icon-sun" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <svg id="theme-icon-moon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
                 </button>
-                <a href="contact.html#book-trial" class="bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 font-inter border border-secondary/20">
+                <a href="contact.html#book-trial" class="h-10 px-6 rounded-xl bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 font-inter border border-secondary/20">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     Trial
                 </a>
@@ -140,38 +137,43 @@
             </button>
         </div>
 
-        <!-- Mobile Drawer Menu -->
+                <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#080511] border-t border-purple-100 dark:border-purple-950/60 absolute w-full shadow-2xl z-40 max-h-[85vh] overflow-y-auto luxury-scrollbar">
-            <div class="px-6 py-8 flex flex-col gap-6">
+            <div class="px-6 py-8 flex flex-col gap-5">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 font-inter block mb-2">Home</span>
-                    <div class="flex flex-col gap-3 pl-3 border-l-2 border-primary">
-                        <a href="index.html" class="text-sm font-bold uppercase tracking-widest text-primary dark:text-secondary hover:text-secondaryHover font-inter">Home 1</a>
-                        <a href="home-2.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Home 2</a>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 font-inter block mb-2 px-3">Home</span>
+                    <div class="flex flex-col gap-2 pl-3 border-l-2 border-purple-200 dark:border-purple-800">
+                        <a href="index.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Home 1</a>
+                        <a href="home-2.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Home 2</a>
                     </div>
                 </div>
 
-                <a href="about.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">About</a>
-                <a href="classes.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Classes</a>
-                <a href="gallery.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Gallery</a>
-                <a href="instructors.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Instructors</a>
-                <a href="workshops.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Workshops</a>
-                <a href="contact.html" class="text-sm font-bold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary font-inter">Contact</a>
+                <a href="about.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">About</a>
+                <a href="classes.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Classes</a>
+                <a href="gallery.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Gallery</a>
+                <a href="instructors.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Instructors</a>
+                <a href="workshops.html" class="text-sm font-bold uppercase tracking-widest text-primary dark:text-secondary bg-purple-50/80 dark:bg-purple-950/40 px-3 py-2 rounded-lg border-l-4 border-primary dark:border-secondary font-inter">Workshops</a>
+                <a href="contact.html" class="text-sm font-semibold uppercase tracking-widest text-brandDark dark:text-white hover:text-secondary px-3 py-1 font-inter transition-colors">Contact</a>
                 
-                <hr class="border-purple-100 dark:border-purple-950/60">
-                <div class="flex items-center justify-between">
-                    <button onclick="toggleRTL()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Toggle RTL</button>
-                    <button onclick="toggleTheme()" class="text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 flex items-center gap-2 hover:text-secondary font-inter">Dark/Light</button>
+                <hr class="border-purple-100 dark:border-purple-950/60 my-1">
+                <div class="flex items-center justify-between gap-3">
+                    <button onclick="toggleRTL()" class="flex-1 py-2.5 px-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/50 border border-purple-200/80 dark:border-purple-800/60 text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2 hover:text-secondary font-inter transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                        <span>Toggle RTL</span>
+                    </button>
+                    <button onclick="toggleTheme()" class="flex-1 py-2.5 px-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/50 border border-purple-200/80 dark:border-purple-800/60 text-xs font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2 hover:text-secondary font-inter transition-all">
+                        <span>Theme</span>
+                    </button>
                 </div>
-                <div class="flex flex-col gap-4 mt-2">
-                    <a href="contact.html#book-trial" class="text-center bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-widest px-6 py-4 rounded-lg shadow-luxury font-inter">Book Trial</a>
+                <div class="flex flex-col gap-4 mt-1">
+                    <a href="contact.html#book-trial" class="text-center bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-luxury font-inter">Book Trial</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- FULL VIEWPORT HERO BANNER -->
-    <header class="relative w-full h-[calc(100vh-5rem)] min-h-[580px] flex items-center justify-center overflow-hidden">
+    <header class="relative w-full min-h-[calc(100vh-5rem)] py-14 sm:py-20 lg:py-28 flex items-center justify-center overflow-hidden">
         <!-- Hero Background Image -->
         <img 
             src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=2000&q=85" 
@@ -188,26 +190,26 @@
         <div class="absolute bottom-10 -left-20 w-96 h-96 bg-primary/40 rounded-full blur-[140px] pointer-events-none"></div>
 
         <!-- Banner Content -->
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
-            <div class="inline-flex items-center gap-2 bg-white/10 dark:bg-purple-950/40 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-6 transition-transform hover:scale-105">
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 dark:bg-purple-950/40 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 sm:px-5 sm:py-2 mb-4 sm:mb-6 transition-transform hover:scale-105">
                 <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
-                <span class="text-xs font-bold tracking-widest uppercase text-purpleGlow font-inter">Weekend Camps &amp; Seasonal Masterclasses</span>
+                <span class="text-[11px] sm:text-xs font-bold tracking-widest uppercase text-purpleGlow font-inter">Weekend Camps &amp; Seasonal Masterclasses</span>
             </div>
 
-            <h1 class="font-playfair text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.2] tracking-tight mb-6 drop-shadow-md">
+            <h1 class="font-playfair text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight sm:leading-[1.2] tracking-tight mb-4 sm:mb-6 drop-shadow-md">
                 Immersive Workshops for
-                <span class="block italic font-normal text-purpleGlow">Curious Young Creators.</span>
+                <span class="block italic font-normal text-purpleGlow mt-1 sm:mt-2">Curious Young Creators.</span>
             </h1>
 
-            <p class="font-inter text-lg sm:text-xl text-purple-100/90 max-w-2xl mx-auto leading-relaxed mb-10 font-medium drop-shadow-sm">
+            <p class="font-inter text-sm sm:text-base md:text-lg text-purple-100/90 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-medium drop-shadow-sm px-2">
                 Hands-on pottery sculpting, mixed-media collage, botanical sketching, and holiday art bootcamps guided by inspiring guest artists.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                <a href="#workshop-schedule" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 font-inter border border-secondary/20">
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                <a href="#workshop-schedule" class="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-xs font-bold uppercase tracking-widest rounded-lg shadow-luxury hover:shadow-luxury-hover hover:-translate-y-0.5 transition-all duration-300 font-inter border border-secondary/20">
                     Explore Schedule
                 </a>
-                <a href="contact.html#book-trial" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-white/15 hover:bg-white/25 text-white backdrop-blur-sm border border-white/30 text-xs font-bold uppercase tracking-widest rounded-lg hover:-translate-y-0.5 transition-all duration-300 font-inter">
+                <a href="contact.html#book-trial" class="w-full sm:w-auto inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 bg-white/15 hover:bg-white/25 text-white backdrop-blur-sm border border-white/30 text-xs font-bold uppercase tracking-widest rounded-lg hover:-translate-y-0.5 transition-all duration-300 font-inter">
                     Reserve Workshop Seat
                 </a>
             </div>
@@ -217,7 +219,7 @@
     <!-- ==================== 6 MODERN WORKSPACE SECTIONS ==================== -->
 
     <!-- SECTION 1: WORKSPACE ARCHITECTURE & ATELIER ZONES -->
-    <section id="workshop-schedule" class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+    <section id="workshop-schedule" class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100/80 dark:border-purple-950/60 relative">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
@@ -232,13 +234,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Zone 1 -->
                 <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
-                    <div class="p-8">
+                    <div class="p-8 flex-1 flex flex-col">
                         <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                         </div>
-                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 01</span>
-                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Ceramics &amp; Clay Wheel</h3>
-                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Equipped with 6 micro electric pottery wheels, natural gray stoneware, non-toxic lead-free glazes, and private kiln firing facilities.</p>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter block mb-1">Atelier Zone 01</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mb-3 min-h-[4rem] sm:min-h-[4.25rem] flex items-center leading-snug">Ceramics &amp; Clay Wheel</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">Equipped with 6 micro electric pottery wheels, natural gray stoneware, non-toxic lead-free glazes, and private kiln firing facilities.</p>
                     </div>
                     <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
                         <span>Capacity: 8 seats</span>
@@ -248,13 +250,13 @@
 
                 <!-- Zone 2 -->
                 <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
-                    <div class="p-8">
+                    <div class="p-8 flex-1 flex flex-col">
                         <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
                         </div>
-                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 02</span>
-                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Grand Canvas Studio</h3>
-                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Full-height Beechwood easels with 5500K daylight-corrected illumination, allowing scale paintings up to 48 inches across.</p>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter block mb-1">Atelier Zone 02</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mb-3 min-h-[4rem] sm:min-h-[4.25rem] flex items-center leading-snug">Grand Canvas Studio</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">Full-height Beechwood easels with 5500K daylight-corrected illumination, allowing scale paintings up to 48 inches across.</p>
                     </div>
                     <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
                         <span>Capacity: 12 easels</span>
@@ -264,13 +266,13 @@
 
                 <!-- Zone 3 -->
                 <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
-                    <div class="p-8">
+                    <div class="p-8 flex-1 flex flex-col">
                         <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                         </div>
-                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 03</span>
-                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Printmaking &amp; Press</h3>
-                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Dedicated linocut, foam-relief, and botanical mono-printing rollers with water-soluble archival inks and heavy rag drying racks.</p>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter block mb-1">Atelier Zone 03</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mb-3 min-h-[4rem] sm:min-h-[4.25rem] flex items-center leading-snug">Printmaking &amp; Press</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">Dedicated linocut, foam-relief, and botanical mono-printing rollers with water-soluble archival inks and heavy rag drying racks.</p>
                     </div>
                     <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
                         <span>Capacity: 10 creators</span>
@@ -280,13 +282,13 @@
 
                 <!-- Zone 4 -->
                 <div class="group relative rounded-3xl overflow-hidden border border-purple-100 dark:border-purple-900/50 bg-white dark:bg-[#120a22] shadow-sm hover:shadow-luxury hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
-                    <div class="p-8">
+                    <div class="p-8 flex-1 flex flex-col">
                         <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950/80 border border-purple-200/50 dark:border-purple-800/40 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
-                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter">Atelier Zone 04</span>
-                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mt-1 mb-3">Sensory Splash Lab</h3>
-                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Waterproof room tailored for toddlers and early learners to explore splatter acrylics, marble baths, and textured finger tempera.</p>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-primary dark:text-secondary font-inter block mb-1">Atelier Zone 04</span>
+                        <h3 class="font-playfair text-2xl font-bold text-brandDark dark:text-white mb-3 min-h-[4rem] sm:min-h-[4.25rem] flex items-center leading-snug">Sensory Splash Lab</h3>
+                        <p class="font-inter text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">Waterproof room tailored for toddlers and early learners to explore splatter acrylics, marble baths, and textured finger tempera.</p>
                     </div>
                     <div class="px-8 py-4 bg-purple-50/50 dark:bg-purple-950/20 border-t border-purple-100 dark:border-purple-900/30 flex items-center justify-between text-xs font-inter text-gray-500">
                         <span>Capacity: 8 toddlers</span>
@@ -298,7 +300,7 @@
     </section>
 
     <!-- SECTION 2: WORKSPACE SAFETY & ENVIRONMENT PROTOCOLS -->
-    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
+    <section class="py-28 bg-white dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="bg-white dark:bg-[#120a22] rounded-3xl p-8 sm:p-12 lg:p-16 border border-purple-100 dark:border-purple-900/40 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
@@ -358,7 +360,7 @@
     </section>
 
     <!-- SECTION 3: WORKSPACE PASSES & MEMBERSHIP PACKAGES -->
-    <section class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100/80 dark:border-purple-950/60 relative">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Flexible Access</span>
@@ -421,45 +423,45 @@
     </section>
 
     <!-- SECTION 4: WORKSPACE EQUIPMENT & GEAR INVENTORY -->
-    <section class="py-28 bg-purple-50/40 dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+    <section class="py-20 sm:py-28 bg-white dark:bg-[#0c0817] border-b border-purple-100 dark:border-purple-950/60 relative">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-xs font-bold tracking-widest uppercase text-secondary font-inter block mb-3">Professional Arsenal</span>
-                <h2 class="font-playfair text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Inside Our Equipment Vault</h2>
-                <p class="font-inter text-gray-600 dark:text-gray-400 text-base leading-relaxed">Top-tier artist tools selected for child safety, durability, and true expressive capability.</p>
+                <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white mb-4">Inside Our Equipment Vault</h2>
+                <p class="font-inter text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">Top-tier artist tools selected for child safety, durability, and true expressive capability.</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Shimpo</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Whisper Wheels</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Shimpo</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Whisper Wheels</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Mabef</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Beechwood Easels</p>
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Mabef</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Beechwood Easels</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Fabriano</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Cotton Papers</p>
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Fabriano</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Cotton Papers</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Sennelier</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Organic Pigments</p>
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Sennelier</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Organic Pigments</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Olympic</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Ceramic Kilns</p>
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Olympic</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Ceramic Kilns</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm">
-                    <p class="font-playfair text-3xl font-bold text-primary dark:text-secondary mb-1">Da Vinci</p>
-                    <p class="font-inter text-xs text-gray-500 font-semibold uppercase">Filbert Brushes</p>
+                <div class="p-3.5 sm:p-5 lg:p-6 rounded-2xl bg-white dark:bg-[#120a22] border border-purple-100 dark:border-purple-900/40 text-center shadow-sm flex flex-col justify-center items-center overflow-hidden">
+                    <p class="font-playfair text-lg min-[380px]:text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-secondary mb-1 tracking-tight truncate max-w-full">Da Vinci</p>
+                    <p class="font-inter text-[10px] min-[380px]:text-[11px] sm:text-xs text-gray-500 font-semibold uppercase leading-tight">Filbert Brushes</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 5: PARENT ATELIER LOUNGE & OBSERVATION PODS -->
-    <section class="py-28 bg-brandLight dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
+    <section class="py-28 bg-purple-50/40 dark:bg-brandDark border-b border-purple-100 dark:border-purple-950/60 relative">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="order-2 lg:order-1 relative rounded-3xl overflow-hidden shadow-luxury border border-purple-100 dark:border-purple-900/50 h-80 sm:h-96">
@@ -679,5 +681,36 @@
             document.documentElement.classList.remove('dark');
         }
     </script>
+
+        <!-- Dynamic Active Navigation Highlighter Script -->
+    <script>
+        function initActiveNav() {
+            try {
+                let currentPath = window.location.pathname.split('/').pop().toLowerCase();
+                if (!currentPath || currentPath === '' || currentPath === '/') {
+                    currentPath = 'index.html';
+                }
+                const isHome1 = currentPath === 'index.html';
+                const isHome2 = currentPath === 'home-2.html';
+                const isHomeGroup = isHome1 || isHome2;
+
+                const homeBtn = document.querySelector('.nav-home-btn');
+                if (homeBtn) {
+                    if (isHomeGroup) {
+                        homeBtn.classList.add('text-primary', 'dark:text-secondary', 'font-bold', "after:content-['']", 'after:absolute', 'after:bottom-0', 'after:left-0', 'after:w-full', 'after:h-[3px]', 'after:bg-gradient-to-r', 'after:from-primary', 'after:to-secondary', 'after:rounded-full');
+                        homeBtn.classList.remove('text-gray-700', 'dark:text-gray-300');
+                    } else {
+                        homeBtn.classList.remove('text-primary', 'dark:text-secondary', 'font-bold', "after:content-['']", 'after:absolute', 'after:bottom-0', 'after:left-0', 'after:w-full', 'after:h-[3px]', 'after:bg-gradient-to-r', 'after:from-primary', 'after:to-secondary', 'after:rounded-full');
+                        homeBtn.classList.add('text-gray-700', 'dark:text-gray-300');
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initActiveNav);
+        initActiveNav();
+    </script>
+
 </body>
 </html>
